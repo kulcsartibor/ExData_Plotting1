@@ -1,5 +1,5 @@
 library(dplyr)
-data <- read.csv("household_power_consumption.txt", sep = ";")
+data <- read.table("household_power_consumption.txt", sep = ";", dec=".", stringsAsFactors=FALSE, header =  TRUE)
 data$Datetime <- as.POSIXct(paste(data$Date, data$Time), format="%Y/%m/%d %H:%M:%S")
 
 data$Global_active_power <- as.numeric(data$Global_active_power)

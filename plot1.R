@@ -15,6 +15,6 @@ data <- filter(data, Date == "1/2/2007" | Date == "2/2/2007")
 
 
 ## Plot generation part
+png("plot1.png",width = 480, height = 480)
 hist(data$Global_active_power, main = "Global active power", col = "red", xlab = "Global acrive power (kilowatts)", ylab = "Frequency")
-dev.copy(png,filename="figure/plot1.png")
 dev.off()

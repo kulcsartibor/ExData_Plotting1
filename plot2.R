@@ -15,6 +15,6 @@ data <- filter(data, Date == "1/2/2007" | Date == "2/2/2007")
 
 
 ## Plot generation part
+png("plot2.png",width = 480, height = 480)
 plot(data$Datetime, data$Global_active_power, type = "l", xlab = "", ylab = "Global Active power (kilowatts)")
-dev.copy(png,filename="figure/plot2.png")
 dev.off()

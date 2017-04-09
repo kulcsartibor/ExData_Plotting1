@@ -15,9 +15,9 @@ data <- filter(data, Date == "1/2/2007" | Date == "2/2/2007")
 
 
 ## Plot generation part
+png("plot3.png",width = 480, height = 480)
 plot(data$Datetime, data$Sub_metering_1, type = "l", xlab = "", ylab = "Easy sub metering")
 lines(data$Datetime, data$Sub_metering_2, col="red") 
 lines(data$Datetime, data$Sub_metering_3, col="blue")
 legend("topright",c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black", "red", "blue"), lty = 1)
-dev.copy(png,filename="figure/plot3.png")
 dev.off()
